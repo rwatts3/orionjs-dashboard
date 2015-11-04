@@ -2,7 +2,7 @@ Package.describe({
 	name: 'rwatts:orionjs-dashboard',
 	version: '0.1.0',
 	// Brief, one-line summary of the package.
-	summary: 'Adds a dashboard to Orion.',
+	summary: 'Adds a Dashboard and Widgets to Orion.',
 	// URL to the Git repository containing the source code for this package.
 	git: 'https://github.com/rwatts3/orionjs-dashboard',
 	// By default, Meteor will default to using README.md for documentation.
