@@ -1,4 +1,5 @@
 /**
+ * @method Options.init
  * @where {client|server}
  * @private
  * @return {Boolean}  Returns Boolean True or False
@@ -37,6 +38,7 @@ if (_.has(Package, 'orionjs:materialize')) {
 }
 
 /**
+ * @method ReactiveTemplates.request
  * @where {client|server}
  * @private
  * @return {String}
@@ -52,6 +54,7 @@ if (_.has(Package, 'orionjs:materialize')) {
 }
 
 /**
+ * @method Roles.registerAction
  * @where {client|server}
  * @private
  * @return {Boolean}
@@ -63,7 +66,8 @@ if (_.has(Package, 'orionjs:materialize')) {
 Roles.registerAction('orionDashboard', true);
 
 /**
- * @where {client|server}
+ * @method RouterLayer.route
+ * @where {client}
  * @private
  * @return {Object}
  * 
@@ -78,7 +82,8 @@ RouterLayer.route('/admin/dashboard', {
 });
 
 /**
- * @where {client|server}
+ * @method orion.accounts.addProtectedRoute
+ * @where {client}
  * @private
  * @return {String}
  * 

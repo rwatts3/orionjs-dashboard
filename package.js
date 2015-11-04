@@ -26,13 +26,13 @@ Package.onUse(function(api) {
     
     api.use(['orionjs:bootstrap@1.6.0','orionjs:materialize@1.6.0'],'client',{weak:true});
     
-	api.addFiles('orionjs-dashboard.js');
+	api.addFiles('orionjs_dashboard.js');
     
     api.addFiles([
-        'orionjs-dashboard-bootstrap.html',
-        'orionjs-dashboard-materialize.html',
-        'orionjs-dashboard-client.js',
-        'orionjs-dashboard-api.js'
+        'orionjs_dashboard_bootstrap.html',
+        'orionjs_dashboard_materialize.html',
+        'orionjs_dashboard_client.js',
+        'orionjs_dashboard_api.js'
     ], 'client');
     
     api.export('orion');

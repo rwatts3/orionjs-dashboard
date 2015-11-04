@@ -1,4 +1,5 @@
 /**
+ * @property orion
  * @where {client}
  * @public
  * @return {Object}
@@ -30,6 +31,8 @@ orion.dashboard._widgets = [];
 
 /**
  * @method orion.dashboard.registerWidget
+ * @where {client}
+ * @public
  * @param  {Object} data An object that contains the data to be passed to the template
  * @return {Object}      Returns an object with data for the widet.
  *
@@ -47,9 +50,10 @@ orion.dashboard.registerWidget = function (data){
 }; 
 
 /**
+ * @property ReactiveTemplates.helpers
  * @where {client}
  * @public
- * @return {none}
+ * @return {undefined}
  * 
  * Pulls all widgets from the orion.dashboard._widgets array and passes them
  * along to the declared template.
