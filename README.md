@@ -10,9 +10,9 @@ This package is an extension of **Orion** and has a dependency on the `orionjs:b
 ```sh
 $ meteor add rwatts:orionjs-dashboard
 ```
-2. Register your widget by following **Example 1 Below** `Client`
+2. Register your widget by following `Client`
 3. Register access to the dashboard by setting `Options.set('showDashboard', true)` within your lib directory. If you have used the Example project from the Orion repository this will typically be in the *lib/options.js* file.
-4. If using the default widget template follow the instructions in **Example 1 Below**
+4. If using the default widget template follow the instructions below
 5. Navigate to `/admin/dashboard/` to see your new widget.
 
 ## Register a custom Widget
@@ -27,19 +27,26 @@ For the best experience, if utilizing the default widgets, you will need to use 
 
 > A tutorial will be provided in the documentation demonstrating how to complete this task.
 
-## Examples
-### Example 1
+## Default Widget Guide
+
+### Publish Counts `Server`
 ```js
-// Client
-// Basic options passed to the default template
+Meteor.publish('allProducts', function () {
+	Counts.publish(this, 'totalProducts', Products.find());
+});
+```
+
+### Register Widget `Client`
+```js
 orion.dashboard.registerWidget({
-	template: 'default', // use default if you have not created a custom widget
-	count: Counts.get('somePublication'), // you must publish the counts from within the publication for them to be accessible from the widget.
-	baseColor: 'teal', // the base color of the widget
-	textColor: 'white', // sets the text color to white
-	label: 'Users', // sets the label of the widget
-	icon: 'books', // sets the icon for materialize use google's icon set for bootstrap use font awesome icons.
-	path: '/admin/users/' // sets the path the widget will navigate to upon clicking on it
+	template: 'default',
+	publication: 'allProducts',
+	count: 'totalProducts',
+	label: 'Products',
+	path: '/admin/products/',
+	baseColor: 'blue',
+	icon: 'shopping_cart',
+	textColor: 'white'
 });
 ```
 

@@ -61,5 +61,36 @@ orion.dashboard.registerWidget = function (data){
 ReactiveTemplates.helpers('orionDashboard', {
 	widgets: function () {
 		return orion.dashboard._widgets;
+	},
+	count: function () {
+		return Counter.get(this);
+	}
+});
+
+/**
+ * @property ReactiveTemplates.onCreated('orionDashboardWidget')
+ * @where {client}
+ * @public
+ * @return {undefined}
+ * 
+ * Subscribes to the publication passed to the widget.
+ */
+ReactiveTemplates.onCreated('orionDashboardWidget', function () {
+	var data = this.data
+	this.subscribe(data.publication);
+});
+
+ReactiveTemplates.helpers('orionDashboardWidget', {
+	/**
+	 * @method getCount
+	 * @public
+	 * @param  {String} count The count passed to through registerWidget
+	 * @return {Number}       Returns the total counts from the publication.
+	 *
+	 * Returns the total count of records based on the Counter
+	 * passed through the registerWidget function.
+	 */
+	getCount: function (count) {
+		return Counts.get(count);
 	}
 });
