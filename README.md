@@ -1,4 +1,4 @@
-# Orionjs Dashboards `v0.1.0`
+# Orionjs Dashboards `v0.1.3`
 ![](https://img.shields.io/badge/Version-0.1.0-orange.svg) ![](https://img.shields.io/badge/License-MIT-blue.svg)   
 
 This package brings a set of api tools as well as a new newspace to orion. `orion.dashboard`. With this package you will be able to 
@@ -56,5 +56,13 @@ orion.dashboard.registerWidget({
 The full API is available [here](https://github.com/rwatts3/orionjs-dashboard/api.md).
 
 ## TODO
-- v0.1.1 *next*
-	- Write default widget for the `orionjs:bootstrap` theme.
+- v0.2.0 *next*
+	- Add default widget for bootstrap theme. 
+- v0.1.3
+	- Added tests and updated documentation.
+- v0.1.2
+	- Added the ability to send publication to the default widget.
+	- Moved `tmeasday:publish-counts` internal so that it's available immediately for default widgets.
+	- Documentation improvements.
+- v0.1.1
+	- Fixed Issue with publications which caused some data not to publish the counts to the widget.
