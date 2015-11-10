@@ -5,6 +5,8 @@ This package brings a set of api tools as well as a new newspace to orion. `orio
 
 This package is an extension of **Orion** and has a dependency on the `orionjs:base` package along with others.
 
+![](./assets/demo.gif)
+
 ## Instructions
 1. Install the package
 ```sh
