@@ -14,26 +14,28 @@ Package.onUse(function(api) {
 	api.versionsFrom('1.2.1');
 	api.use([
 		'ecmascript',
-        'meteor-platform',
-        'check',
-        'orionjs:core@1.6.0',
-        'nicolaslopezj:roles@2.0.1',
-		'tmeasday:publish-counts@0.7.2'
+    'meteor-platform',
+    'check',
+    'orionjs:core@1.6.0',
+    'nicolaslopezj:roles@2.0.1',
+		'tmeasday:publish-counts@0.7.2',
+    'fortawesome:fontawesome@4.5.0'
     ]);
 	api.imply(['tmeasday:publish-counts','orionjs:core']);
-    
-    api.use(['orionjs:bootstrap@1.6.0','orionjs:materialize@1.6.0'],'client',{weak:true});
-    
+
+  api.use(['orionjs:bootstrap@1.6.0','orionjs:materialize@1.6.0'],'client',{weak:true});
+
 	api.addFiles('src/orionjs-dashboard.js');
-    
-    api.addFiles([
-        'src/orionjs-dashboard-bootstrap.html',
-        'src/orionjs-dashboard-materialize.html',
-        'src/orionjs-dashboard-client.js',
-        'src/orionjs-dashboard-api.js'
-    ], 'client');
-    
-    api.export('orion');
+
+  api.addFiles([
+    'src/orionjs-dashboard-bootstrap.html',
+    'src/orionjs-dashboard-bootstrap.css',
+    'src/orionjs-dashboard-materialize.html',
+    'src/orionjs-dashboard-client.js',
+    'src/orionjs-dashboard-api.js'
+  ], 'client');
+
+  api.export('orion');
 });
 
 Package.onTest(function (api) {
