@@ -28,6 +28,7 @@ Package.onUse(function(api) {
 	api.addFiles('src/orionjs-dashboard.js');
 
   api.addFiles([
+    'src/orionjs-dashboard.css',
     'src/orionjs-dashboard-bootstrap.html',
     'src/orionjs-dashboard-bootstrap.css',
     'src/orionjs-dashboard-materialize.html',
