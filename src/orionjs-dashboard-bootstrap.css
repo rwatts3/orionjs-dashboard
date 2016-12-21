@@ -1,0 +1,16 @@
+.widget .well .count > h1 {
+  margin: 0;
+}
+
+.widget .well .icon {
+  text-align: right;
+}
+
+.widget .well .icon > i {
+  font-size: 39px;
+  margin-right: .2em;
+}
+
+.widget .well .widget-label {
+  text-align: center;
+}

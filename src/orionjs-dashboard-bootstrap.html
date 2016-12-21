@@ -1,8 +1,34 @@
 <template name="orion_dashboard_bootstrap">
-  {{# Layout template=materializeHeader }}
-      Dashboard
+  {{# Layout template=bootstrapHeader }}
+    <h3 class="title">Dashboard</h3>
   {{/ Layout }}
-  {{# Layout template=materializeContent }}
-    
+  {{# Layout template=bootstrapContent }}
+    <div class="row">
+      {{#each widgets}}
+        {{> Template.dynamic template=template}}
+      {{/each}}
+    </div>
   {{/ Layout }}
+</template>
+
+<template name="orion_dashboard_default_widget_bootstrap">
+  <a href="{{path}}">
+    <div class="col-sm-12 col-md-4 widget">
+      <div class="well" style="background-color: {{baseColor}}">
+        <div class="row">
+          <div style="color: {{textColor}}">
+            <div class="col-sm-6 col-md-6 count">
+              <h1>{{getCount count}}</h1>
+            </div>
+            <div class="col-sm-6 col-md-6 icon">
+              <i class="fa {{icon}}"></i>
+            </div>
+          </div>
+        </div>
+        <div class="widget-label" style="background-color: {{baseColor}};">
+          <h3 style="color: {{textColor}}">{{label}}</h3>
+        </div>
+      </div>
+    </div>
+  </a>
 </template>
